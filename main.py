@@ -20,8 +20,11 @@ def random_idea():
         lines = file.readlines()
         tk.messagebox.showinfo("Idea", (choice(lines)))
 
+
 def click_enter():
+    """Connecting the ENTER button"""
     add_idea()
+
 
 window = tk.Tk()
 
@@ -42,7 +45,7 @@ btn = tk.Button(
 )
 btn.place(x=220, y=110)
 
-window.bind('<Return>', click_enter)
+window.bind("<Return>", click_enter)
 
 GiveIdeia = tk.Label(
     window, text="Generate an idea", font=("Arial Bold", 15), fg="lime", bg="black"
